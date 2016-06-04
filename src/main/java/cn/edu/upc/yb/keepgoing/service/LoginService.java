@@ -1,10 +1,13 @@
 package cn.edu.upc.yb.keepgoing.service;
 
+import cn.edu.upc.yb.keepgoing.config.DevConfig;
 import cn.edu.upc.yb.keepgoing.gsontemplate.SessionUser;
 import cn.edu.upc.yb.keepgoing.util.MCrypt;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpSession;
 
 /**
@@ -15,6 +18,10 @@ public class LoginService {
 
     @Autowired
     private HttpSession httpSession;
+
+    public String toYibanAuth() {
+        return "redirect:https://openapi.yiban.cn/oauth/authorize?client_id=" + DevConfig.client_id + "&redirect_uri=" + DevConfig.redirect_uri;
+    }
 
     /**
      * 判断用户是否登陆
