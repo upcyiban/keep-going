@@ -8,36 +8,42 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="../bower_components/semantic/dist/semantic.css">
+  <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
-<body ng-app="frontendApp">
+<body ng-app="keepGoingApp">
 <!--[if lte IE 8]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
   your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Add your site or application content here -->
-<div class="header">
-  <div class="navbar navbar-default" role="navigation">
-    <div class="container">
+<header class="container">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#/">frontend</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/">石大易坚持</a>
       </div>
-      <div class="collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#/">Contact</a></li>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-option active"><a href="#/">主页</a></li>
+          <li class="nav-option"><a href="/#/about">关于</a></li>
+          <li class="nav-option"><a href="/#/contact">联系我们</a></li>
         </ul>
-      </div>
-    </div>
-  </div>
-</div>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+</header>
 
 <div class="container">
   <div ng-view=""></div>
@@ -45,23 +51,9 @@
 
 <div class="footer">
   <div class="container">
-    <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <p><span class="glyphicon glyphicon-heart"></span> from the UPCyiban skyadmin</p>
   </div>
 </div>
-
-
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-  !function (A, n, g, u, l, a, r) {
-    A.GoogleAnalyticsObject = l, A[l] = A[l] || function () {
-        (A[l].q = A[l].q || []).push(arguments)
-      }, A[l].l = +new Date, a = n.createElement(g),
-      r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-  }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-XXXXX-X');
-  ga('send', 'pageview');
-</script>
 
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
@@ -73,7 +65,7 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-touch/angular-touch.js"></script>
-<script src="bower_components/semantic/dist/semantic.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 

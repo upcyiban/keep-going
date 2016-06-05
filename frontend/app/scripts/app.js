@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name frontendApp
+ * @name keepGoing
  * @description
- * # frontendApp
+ * # keepGoingApp
  *
  * Main module of the application.
  */
 angular
-  .module('frontendApp', [
+  .module('keepGoingApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -33,3 +33,10 @@ angular
         redirectTo: '/'
       });
   });
+
+$(document).ready(function () {
+  $('.nav-option').on('click', function () {
+    $('.nav-option').removeClass('active');
+    $(this).addClass('active');
+  })
+});

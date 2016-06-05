@@ -7,11 +7,7 @@
  * # AboutCtrl
  * Controller of the frontendApp
  */
-angular.module('frontendApp')
+angular.module('keepGoingApp')
   .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
   });

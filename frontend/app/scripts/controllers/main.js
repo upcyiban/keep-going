@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the frontendApp
  */
-angular.module('frontendApp')
+angular.module('keepGoingApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
