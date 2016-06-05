@@ -21,6 +21,15 @@ public class KeepGoingProject {
 
     private String creattime;
 
+    public KeepGoingProject() {
+    }
+
+    public KeepGoingProject(String projectname, String projectdetail, String creattime) {
+        this.projectname = projectname;
+        this.projectdetail = projectdetail;
+        this.creattime = creattime;
+    }
+
     public int getId() {
         return id;
     }
