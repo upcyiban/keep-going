@@ -17,6 +17,15 @@ public class KeepGoingSign {
     private int yibanid;
     private String signtime;
 
+    public KeepGoingSign() {
+    }
+
+    public KeepGoingSign(int projectid, int yibanid, String signtime) {
+        this.projectid = projectid;
+        this.yibanid = yibanid;
+        this.signtime = signtime;
+    }
+
     public int getId() {
         return id;
     }

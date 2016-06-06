@@ -1,6 +1,7 @@
 package cn.edu.upc.yb.keepgoing.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by skyADMIN on 16/6/4.
@@ -19,6 +20,8 @@ public class KeepGoingProject {
     private String projectname;
     private String projectdetail;
 
+    private int lastDays;  //连续签到的天数
+    private String endDate; //最后的签到时间
     private String creattime;
 
     public KeepGoingProject() {
@@ -28,6 +31,22 @@ public class KeepGoingProject {
         this.projectname = projectname;
         this.projectdetail = projectdetail;
         this.creattime = creattime;
+    }
+
+    public int getLastDays() {
+        return lastDays;
+    }
+
+    public void setLastDays(int lastDays) {
+        this.lastDays = lastDays;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
     }
 
     public int getId() {

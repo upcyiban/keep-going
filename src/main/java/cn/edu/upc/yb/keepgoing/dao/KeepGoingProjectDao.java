@@ -12,7 +12,6 @@ import java.util.List;
 
 public interface KeepGoingProjectDao extends CrudRepository<KeepGoingProject,Integer> {
     public KeepGoingProject findById(int id);
-
     public List<KeepGoingProject> findByYibanid(int yibanid);
 
 }

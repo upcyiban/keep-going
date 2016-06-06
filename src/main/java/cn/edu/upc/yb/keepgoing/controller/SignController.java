@@ -20,9 +20,9 @@ public class SignController {
 
 
     @RequestMapping(value = "/sign", method = RequestMethod.POST)
-    public String sign() {
+    public String sign(int projectid) {
 
-        return signService.signToday();
+        return signService.signToday(projectid);
     }
 
 }
