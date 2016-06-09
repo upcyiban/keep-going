@@ -18,7 +18,6 @@ public class KeepGoingProject {
     private String yibanusername;
 
     private String projectname;
-    private String projectdetail;
 
     private int lastDays;  //连续签到的天数
     private String endDate; //最后的签到时间
@@ -27,9 +26,8 @@ public class KeepGoingProject {
     public KeepGoingProject() {
     }
 
-    public KeepGoingProject(String projectname, String projectdetail, String creattime) {
+    public KeepGoingProject(String projectname, String creattime) {
         this.projectname = projectname;
-        this.projectdetail = projectdetail;
         this.creattime = creattime;
     }
 
@@ -79,14 +77,6 @@ public class KeepGoingProject {
 
     public void setProjectname(String projectname) {
         this.projectname = projectname;
-    }
-
-    public String getProjectdetail() {
-        return projectdetail;
-    }
-
-    public void setProjectdetail(String projectdetail) {
-        this.projectdetail = projectdetail;
     }
 
     public String getCreattime() {

@@ -27,8 +27,8 @@ public class CreateNewService {
     /**
      * 新建签到项目
      */
-    public String BuildProject(String name, String detail) {
-        KeepGoingProject project = new KeepGoingProject(name, detail, DateUtils.Date2String(new Date()));
+    public String buildProject(String name) {
+        KeepGoingProject project = new KeepGoingProject(name, DateUtils.Date2String(new Date()));
         project.setYibanid((int) httpSession.getAttribute("userid"));
         project.setYibanusername((String) httpSession.getAttribute("username"));
         keepGoingProjectDao.save(project);

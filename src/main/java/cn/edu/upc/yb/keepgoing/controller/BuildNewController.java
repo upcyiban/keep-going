@@ -24,8 +24,8 @@ public class BuildNewController {
      * 新建签到项目
      */
     @RequestMapping(value = "/build", method = RequestMethod.POST)
-    public String NewProject(String name, String detail) {
-        return keepGoingService.BuildProject(name, detail);
+    public String newProject(String name) {
+        return keepGoingService.buildProject(name);
     }
 
 }

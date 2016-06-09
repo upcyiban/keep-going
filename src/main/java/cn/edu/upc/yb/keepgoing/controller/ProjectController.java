@@ -22,7 +22,6 @@ public class ProjectController {
 
     @RequestMapping(value = "/project_list",method = RequestMethod.GET)
     public List<KeepGoingProject> getProjectList(){
-
         return projectService.getProject();
     }
 
