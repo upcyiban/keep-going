@@ -72,3 +72,4 @@ fabric.properties
 
 src/main/resources/static/
 src/main/resources/templates/
+.idea
