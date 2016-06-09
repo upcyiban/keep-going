@@ -48,5 +48,7 @@ $(document).ready(function () {
   $('.nav-option').on('click', function () {
     $('.nav-option').removeClass('active');
     $(this).addClass('active');
-  })
+  });
+
+  
 });
