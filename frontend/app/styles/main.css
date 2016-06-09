@@ -6,7 +6,7 @@
 }
 
 body {
-  padding-top: 20px;
+  padding: 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -82,3 +82,6 @@ body {
   }
 }
 
+.btn-sub {
+  margin-top: 20px;
+}

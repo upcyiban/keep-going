@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name keepGoing
+ * @name frontendApp
  * @description
- * # keepGoingApp
+ * # frontendApp
  *
  * Main module of the application.
  */
 angular
-  .module('keepGoingApp', [
+  .module('frontendApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -24,11 +24,6 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/create', {
-        templateUrl: 'views/create.html',
-        controller: 'CreateCtrl',
-        controllerAs: 'create'
-      })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
@@ -39,16 +34,12 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/create', {
+        templateUrl: 'views/create.html',
+        controller: 'CreateCtrl',
+        controllerAs: 'create'
+      })
       .otherwise({
         redirectTo: '/'
       });
   });
-
-$(document).ready(function () {
-  $('.nav-option').on('click', function () {
-    $('.nav-option').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  
-});
