@@ -20,8 +20,6 @@ public class IndexController {
         if (!loginService.isLogin()) {
             return loginService.toYibanAuth();
         }
-
-
         return "index";
     }
 }

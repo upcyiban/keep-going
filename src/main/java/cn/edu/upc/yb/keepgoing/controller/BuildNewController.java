@@ -15,17 +15,11 @@ public class BuildNewController {
     @Autowired
     private CreateNewService keepGoingService;
 
-    @RequestMapping("/formshow")
-    public String showform(){
-        return "newProject";
-    }
-
     /**
      * 新建签到项目
      */
-    @RequestMapping(value = "/build", method = RequestMethod.POST)
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
     public String newProject(String name) {
         return keepGoingService.buildProject(name);
     }
-
 }

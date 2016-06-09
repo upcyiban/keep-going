@@ -18,8 +18,9 @@ public class CreateNewService {
 
     @Autowired
     private KeepGoingProjectDao keepGoingProjectDao;
+
     @Autowired
-    private KeepGoingSignDao keepGoingSignDao;
+    private LoginService loginService;
 
     @Autowired
     HttpSession httpSession;
@@ -28,12 +29,14 @@ public class CreateNewService {
      * 新建签到项目
      */
     public String buildProject(String name) {
+        if (!loginService.isLogin()){
+            return "fail";
+        }
         KeepGoingProject project = new KeepGoingProject(name, DateUtils.Date2String(new Date()));
         project.setYibanid((int) httpSession.getAttribute("userid"));
         project.setYibanusername((String) httpSession.getAttribute("username"));
         keepGoingProjectDao.save(project);
-
-        return "SUCCESS";
+        return "success";
     }
 
 

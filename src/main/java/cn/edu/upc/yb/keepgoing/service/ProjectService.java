@@ -21,7 +21,6 @@ public class ProjectService {
 
 
     public List<KeepGoingProject> getProject() {
-
         return keepGoingProjectDao.findByYibanid((Integer) httpSession.getAttribute("userid"));
     }
 

@@ -22,6 +22,6 @@ public class TestCreateNew {
 
     @Test
     public void contextLoads() {
-        keepGoingService.BuildProject("test","测试用");
+
     }
 }
