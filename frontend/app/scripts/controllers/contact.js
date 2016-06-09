@@ -9,9 +9,6 @@
  */
 angular.module('frontendApp')
   .controller('ContactCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    dealNavActive('contact');
+    
   });

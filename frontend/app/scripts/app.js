@@ -1,5 +1,9 @@
 'use strict';
 
+function dealNavActive(navname) {
+  $('.nav-option').removeClass('active');
+  $('#'+navname+'').addClass('active');
+}
 /**
  * @ngdoc overview
  * @name frontendApp
